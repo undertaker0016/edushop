@@ -1,0 +1,5 @@
+payment:
+  mode: ${EDUSHOP_PAYMENT_MODE:DEV_SIMULATOR}
+security:
+  jwt:
+    secret-base64: ${EDUSHOP_JWT_SECRET_BASE64:VGoInlQmRhDir0Tp38/uwrIvvRFgm8b1wPse+vhAJfg=}
