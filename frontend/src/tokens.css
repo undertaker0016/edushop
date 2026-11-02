@@ -1,0 +1,24 @@
+/* Primitive → semantic → component tokens. Tailwind supplies spacing primitives. */
+:root {
+  --primitive-navy: #142b49;
+  --primitive-blue: #365b7d;
+  --primitive-blue-hover: #284762;
+  --primitive-background: #f7f8fa;
+  --primitive-surface: #ffffff;
+  --primitive-ink: #0f172a;
+  --primitive-muted: #526173;
+  --primitive-border: #e2e8f0;
+  --semantic-primary: var(--primitive-blue);
+  --semantic-primary-hover: var(--primitive-blue-hover);
+  --semantic-background: var(--primitive-background);
+  --semantic-surface: var(--primitive-surface);
+  --semantic-text: var(--primitive-ink);
+  --semantic-muted: var(--primitive-muted);
+  --semantic-border: var(--primitive-border);
+  --button-primary-background: var(--semantic-primary);
+  --button-primary-hover: var(--semantic-primary-hover);
+  --workspace-sidebar-background: var(--primitive-navy);
+  --control-min-height: 2.75rem;
+  --focus-offset: 0.125rem;
+}
+

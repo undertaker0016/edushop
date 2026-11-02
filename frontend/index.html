@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>EduShop</title>
+    <script>
+      try {
+        const theme =
+          localStorage.getItem("edushop.theme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        document.documentElement.style.colorScheme = theme;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div
+        role="status"
+        style="
+          min-height: 60vh;
+          display: grid;
+          place-content: center;
+          justify-items: center;
+          font-family: system-ui;
+          color: #526173;
+        "
+      >
+        <img
+          class="boot-gif"
+          src="/images/ui/page-loading.gif"
+          width="120"
+          height="120"
+          alt=""
+        />
+        <p>Đang mở EduShop…</p>
+      </div>
+    </div>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .boot-gif {
+          display: none;
+        }
+      }
+    </style>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
